@@ -126,7 +126,10 @@ function runTests() {
   describe("Hamburger Menu", function() {
     const hamburgerBtn = document.querySelector('.hamburger-btn')
     const hamburgerMenu = document.querySelector('.hamburger-menu')
+    
     const openMenu = () => {
+      if ($('openMenu').attribute('aria-expanded') === "true") {
+      }
       hamburgerMenu.classList.add('show-menu')
       hamburgerBtn.setAttribute('aria-expanded', true)
     }
